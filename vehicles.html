@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentRide - Our Vehicle Fleet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="vehicles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="pngegg.png" alt="RentRide Logo">
+      RENTRIDE
+    </a>
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="vehicles.html">Vehicles</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="login-button">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-header">
+    <h1>Our Vehicle Fleet</h1>
+    <p>Choose from our wide selection of premium vehicles</p>
+  </div>
+
+  <div class="filter-section">
+    <div class="filter-group">
+      <label for="vehicle-type">Vehicle Type</label>
+      <select id="vehicle-type">
+        <option value="all">All Vehicles</option>
+        <option value="sedan">Sedan</option>
+        <option value="suv">SUV</option>
+        <option value="sports">Sports Car</option>
+        <option value="luxury">Luxury</option>
+        <option value="electric">Electric</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="price-range">Price Range</label>
+      <select id="price-range">
+        <option value="all">Any Price</option>
+        <option value="50-100">$50 - $100/day</option>
+        <option value="100-200">$100 - $200/day</option>
+        <option value="200-500">$200 - $500/day</option>
+        <option value="500+">$500+/day</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="seats">Seats</label>
+      <select id="seats">
+        <option value="all">Any</option>
+        <option value="2">2 Seats</option>
+        <option value="4">4 Seats</option>
+        <option value="5">5 Seats</option>
+        <option value="7">7+ Seats</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="vehicle-grid">
+    <!-- Vehicle 1 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1494976388901-8329f0b9c3d9" alt="Ford Mustang" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Ford Mustang GT</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 450HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Sports</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 4</span>
+        </div>
+        <div class="vehicle-price">10,000 LKR  <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 2 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a" alt="Porsche 911" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Porsche 911 Carrera</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 379HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Luxury</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 2</span>
+        </div>
+        <div class="vehicle-price">15,000 LKR <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 3 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e" alt="Land Rover" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Land Rover Defender</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 296HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> SUV</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 7</span>
+        </div>
+        <div class="vehicle-price">20,000 LKR <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 4 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d" alt="Tesla Model S" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Tesla Model S</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-bolt"></i> Electric</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Luxury</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 5</span>
+        </div>
+        <div class="vehicle-price">22,000 LKR <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 5 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="Audi Q7" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Audi Q7</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 335HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> SUV</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 7</span>
+        </div>
+        <div class="vehicle-price">12,000 LKR  <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 6 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1542362567-b07e54358753" alt="Mercedes S-Class" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Mercedes S-Class</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 429HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Luxury</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 5</span>
+        </div>
+        <div class="vehicle-price">18,000 LKR  <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 7 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7" alt="Ferrari 488" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Ferrari 488 GTB</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 661HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Supercar</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 2</span>
+        </div>
+        <div class="vehicle-price">40,000 LKR <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 8 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c" alt="BMW 5 Series" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">BMW 530i</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 248HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Sedan</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 5</span>
+        </div>
+        <div class="vehicle-price">5,000 LKR <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 9 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d" alt="Jeep Wrangler" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Jeep Wrangler</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 285HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Off-Road</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 5</span>
+        </div>
+        <div class="vehicle-price">8,000 LKR  <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 10 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1593941707882-a5bba53b0998" alt="Toyota Camry" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Toyota Camry</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 203HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Sedan</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 5</span>
+        </div>
+        <div class="vehicle-price">2,000 LKR  <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 11 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2" alt="Mercedes G-Wagon" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Mercedes G63 AMG</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 577HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Luxury SUV</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 5</span>
+        </div>
+        <div class="vehicle-price">30,000 LKR  <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 12 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2" alt="Tesla Model 3" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Tesla Model 3</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-bolt"></i> Electric</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Sedan</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 5</span>
+        </div>
+        <div class="vehicle-price">16,000 LKR  <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 13 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1560920968-5b31d4f5b0f3" alt="Range Rover" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Range Rover Velar</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 247HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> SUV</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 5</span>
+        </div>
+        <div class="vehicle-price">22,000 LKR <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 14 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98" alt="Chevrolet Corvette" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Chevrolet Corvette</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 495HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Sports</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 2</span>
+        </div>
+        <div class="vehicle-price">33,000 LKR  <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 15 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027" alt="Audi A4" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Audi A4</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 201HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Sedan</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 5</span>
+        </div>
+        <div class="vehicle-price">35,000 LKR  <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 16 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537" alt="Lamborghini Huracan" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Lamborghini Huracan</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 630HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Supercar</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 2</span>
+        </div>
+        <div class="vehicle-price">90,000 LKR  <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 17 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="Volkswagen Golf" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">VW Golf GTI</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 228HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Hatchback</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 5</span>
+        </div>
+        <div class="vehicle-price">1,000 LKR  <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 18 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1567818735868-e71b99932e29" alt="Tesla Model X" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Tesla Model X</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-bolt"></i> Electric</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> SUV</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 7</span>
+        </div>
+        <div class="vehicle-price">4,000 LKR <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 19 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8" alt="Porsche Taycan" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Porsche Taycan</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-bolt"></i> Electric</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Luxury</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 4</span>
+        </div>
+        <div class="vehicle-price">28,000 LKR  <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+
+    <!-- Vehicle 20 -->
+    <div class="vehicle-card">
+      <img src="https://images.unsplash.com/photo-1590071089561-2085b78b0321" alt="Ford F-150" class="vehicle-image">
+      <div class="vehicle-details">
+        <h3 class="vehicle-title">Ford F-150 Raptor</h3>
+        <div class="vehicle-specs">
+          <span class="vehicle-spec"><i class="fas fa-tachometer-alt"></i> 450HP</span>
+          <span class="vehicle-spec"><i class="fas fa-car"></i> Truck</span>
+          <span class="vehicle-spec"><i class="fas fa-users"></i> 5</span>
+        </div>
+        <div class="vehicle-price">13,000 LKR  <span class="price-period">/per day</span></div>
+        <a href="#" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>&copy; 2025 RentRide. All rights reserved.</p>
+    <p>Designed with <i class="fas fa-heart"></i> by RentRide Team</p>
+  </footer>
+
+  <script >
+  // Simple filter functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const vehicleTypeFilter = document.getElementById('vehicle-type');
+  const priceRangeFilter = document.getElementById('price-range');
+  const seatsFilter = document.getElementById('seats');
+  const vehicleCards = document.querySelectorAll('.vehicle-card');
+
+  function filterVehicles() {
+    const typeValue = vehicleTypeFilter.value;
+    const priceValue = priceRangeFilter.value;
+    const seatsValue = seatsFilter.value;
+
+    vehicleCards.forEach(card => {
+      const type = card.querySelector('.vehicle-spec:nth-child(2)').textContent.toLowerCase();
+      const price = parseInt(card.querySelector('.vehicle-price').textContent.replace('$', ''));
+      const seats = card.querySelector('.vehicle-spec:nth-child(3)').textContent;
+
+      let typeMatch = typeValue === 'all' || type.includes(typeValue);
+      let priceMatch = true;
+      let seatsMatch = seatsValue === 'all' || seats.includes(seatsValue);
+
+      if (priceValue !== 'all') {
+        const [min, max] = priceValue.split('-').map(Number);
+        priceMatch = priceValue.endsWith('+') ? 
+          price >= parseInt(priceValue) : 
+          price >= min && price <= max;
+      }
+
+      if (typeMatch && priceMatch && seatsMatch) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  vehicleTypeFilter.addEventListener('change', filterVehicles);
+  priceRangeFilter.addEventListener('change', filterVehicles);
+  seatsFilter.addEventListener('change', filterVehicles);
+});
+
+</script>
+</body>
+</html>

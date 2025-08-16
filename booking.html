@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compact Vehicle Booking</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+  <!-- Moving car elements -->
+  <div class="moving-car" style="top: 20%; animation-delay: 0s;"></div>
+  <div class="moving-car" style="top: 50%; animation-delay: 4s;"></div>
+
+  <div class="booking-form">
+    <h2><i class="fas fa-car"></i><b> Vehicle Booking</b></h2>
+
+    <div class="form-group">
+      <label><i class="fas fa-user-tie"></i> <b>Driver Option</b></label>
+      <select id="driverOption" onchange="toggleDriverInfo()">
+        <option value="without">With Driver</option>
+        <option value="with">Without Driver</option>
+      </select>
+    </div>
+
+    <div class="driver-info">
+      <div class="form-group">
+        <label><i class="fas fa-id-card"></i> <b>Driver Name</b></label>
+        <input type="text" id="driverName" placeholder="Driver name">
+      </div>
+      <div class="form-group">
+        <label><i class="fas fa-id-badge"></i> <b>License No</b></label>
+        <input type="text" id="licenseNumber" placeholder="License number">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label><i class="fas fa-phone"></i><b> Contact</b></label>
+      <input type="tel" id="contact" placeholder="Your number">
+    </div>
+
+    <div class="form-group">
+      <label><i class="fas fa-calendar-alt"></i> <b>Pickup Date</b></label>
+      <input type="datetime-local" id="pickupDate">
+    </div>
+
+    <div class="form-group">
+      <label>
+        <input type="checkbox" id="roundTrip"> <i class="fas fa-exchange-alt"></i> <b>Round Trip</b>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label><i class="fas fa-users"></i> Passengers</label>
+      <input type="number" id="capacity" placeholder="Number of passengers">
+    </div>
+
+    <div class="form-group">
+      <label><i class="fas fa-map-marker-alt"></i> Pickup Location</label>
+      <input type="text" id="pickupLocation" placeholder="Pickup address">
+    </div>
+
+    <div class="form-group">
+      <label><i class="fas fa-map-marker-alt"></i> Destination</label>
+      <input type="text" id="destination" placeholder="Destination address">
+    </div>
+
+    <div class="form-group">
+      <label><i class="fas fa-car-side"></i> Vehicle Type</label>
+      <select id="vehicleType" onchange="updatePrice()">
+        <option>Car (LKR 100/km)</option>
+        <option>Van (LKR 150/km)</option>
+        <option>Bus (LKR 200/km)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label><i class="fas fa-road"></i> Distance (km)</label>
+      <input type="number" id="distance" placeholder="Enter distance" oninput="calculatePrice()">
+    </div>
+
+    <div class="form-group">
+      <label><i class="fas fa-comment-alt"></i> Special Requests</label>
+      <textarea id="specialRequests" rows="2" placeholder="Any special requirements"></textarea>
+    </div>
+
+    <button onclick="window.location.href='your-page.html'">
+      <i class="fas fa-check-circle"></i> Book Now
+    </button>
+
+    <div class="price-display" id="priceDisplay">Total: LKR 0.00</div>
+  </div>
+
+  <script>
+    const prices = { Car: 100, Van: 150, Bus: 200 };
+
+    function toggleDriverInfo() {
+      const driverInfo = document.querySelector(".driver-info");
+      if (document.getElementById("driverOption").value === "with") {
+        driverInfo.style.display = "block";
+      } else {
+        driverInfo.style.animation = "slideDown 0.4s ease-out reverse";
+        setTimeout(() => driverInfo.style.display = "none", 400);
+      }
+    }
+
+    function updatePrice() {
+      calculatePrice();
+    }
+
+    function calculatePrice() {
+      const type = document.getElementById("vehicleType").value.split(" ")[0];
+      const distance = parseFloat(document.getElementById("distance").value) || 0;
+      const basePrice = prices[type] * distance;
+      const total = document.getElementById("roundTrip").checked ? basePrice * 2 : basePrice;
+
+      const priceDisplay = document.getElementById("priceDisplay");
+      priceDisplay.textContent = `Total: LKR ${total.toFixed(2)}`;
+      priceDisplay.style.animation = "none";
+      void priceDisplay.offsetWidth;
+      priceDisplay.style.animation = "pulse 0.5s ease";
+    }
+
+    // Initialize form
+    document.addEventListener('DOMContentLoaded', function() {
+      calculatePrice();
+    });
+  </script>
+</body>
+</html>

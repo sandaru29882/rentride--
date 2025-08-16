@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentRide - Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <!-- Floating background elements -->
+  <div class="floating"></div>
+  <div class="floating"></div>
+  <div class="floating"></div>
+  
+  <div class="login-container">
+    <img src="pngegg.png" class="logo" alt="Car Logo"> 
+    <h2>Login to Your Account</h2>
+    
+    <form>
+      <div class="input-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+    
+    <div class="signup-link">
+      Don't have an account? <a href="signup.html">Sign up</a>
+    </div>
+  </div>
+  
+  <script >
+    document.addEventListener('DOMContentLoaded', function() {
+  const loginForm = document.querySelector('.login-container form');
+  
+  if (loginForm) {
+    loginForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      
+      // Simple validation
+      if (!email || !password) {
+        alert('Please fill in all fields');
+        return;
+      }
+      
+      // Show loading state
+      const loginBtn = document.querySelector('.login-btn');
+      loginBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Logging in...';
+      loginBtn.disabled = true;
+      
+      // Simulate login process
+      setTimeout(() => {
+        // Reset button state
+        loginBtn.innerHTML = 'Login';
+        loginBtn.disabled = false;
+        
+        // Show success message
+        alert('Login successful! Redirecting to dashboard...');
+        
+        // Redirect (in a real app, this would be handled by your authentication flow)
+        window.location.href = 'dashboard.html';
+      }, 1500);
+    });
+  }
+});
+  </script>
+</body>
+</html>
